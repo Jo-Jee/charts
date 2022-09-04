@@ -1,0 +1,27 @@
+server:
+  extraArgs: ["--insecure"]
+  config:
+    url: "https://argo.jojee.co.kr"
+    resource.customizations.ignoreDifferences.ConfigMap: |
+      jqPathExpressions:
+      - .data
+
+  certificate:
+    enabled: true
+    domain: argo.jojee.co.kr
+    issuer:
+      name: letsencrypt
+      kind: ClusterIssuer
+    secretName: tls-secret
+
+  ingress:
+    enabled: true
+    hosts:
+    - argo.jojee.co.kr
+    annotations: {
+      kubernetes.io/ingress.class: traefik,
+    }
+    tls:
+    - secretName: tls-secret
+      hosts:
+        - argo.jojee.co.kr
