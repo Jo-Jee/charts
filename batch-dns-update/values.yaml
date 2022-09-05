@@ -1,0 +1,6 @@
+namespace: batch-dns-update
+configMap: batch-dns-update
+appName: batch-dns-update
+
+port: 3000
+readinessProbePath: /health

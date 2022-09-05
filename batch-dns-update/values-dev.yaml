@@ -1,0 +1,15 @@
+env: production
+
+app:
+  image:
+    repository: capjjo/batch-dns-update
+    tag: latest
+    pullPolicy: Always
+  spec:
+    cpu:
+      requests: 100m
+      limits: 100m
+    memory:
+      requests: 512Mi
+      limits: 512Mi
+  cmd: '["node", "dist/main.js"]'
