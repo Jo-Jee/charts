@@ -1,0 +1,15 @@
+env: production
+
+app:
+  image:
+    repository: capjjo/web-blog
+    tag: latest
+    pullPolicy: Always
+  spec:
+    cpu:
+      requests: 1000m
+      limits: 1000m
+    memory:
+      requests: 1024Mi
+      limits: 1024Mi
+  cmd: '["node", "server.js"]'
