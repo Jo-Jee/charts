@@ -3,4 +3,4 @@ configMap: web-blog
 appName: web-blog
 
 port: 3000
-readinessProbePath: /ping
+readinessProbePath: /api/ping
