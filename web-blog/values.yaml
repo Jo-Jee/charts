@@ -2,7 +2,5 @@ namespace: web-blog
 configMap: web-blog
 appName: web-blog
 
-host: blog.jojee.co.kr
-
 port: 3000
 readinessProbePath: /ping
