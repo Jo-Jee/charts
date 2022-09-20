@@ -1,4 +1,5 @@
 grafana:
+  host: grafana.jojee.co.kr
   ingress:
     enabled: true
     hosts:

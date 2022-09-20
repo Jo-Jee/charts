@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tls-cert
+  namespace: default
+spec:
+  secretName: tls-secret
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: {{ .Values.grafana.host }}
+  dnsNames:
+    - {{ .Values.grafana.host }}
