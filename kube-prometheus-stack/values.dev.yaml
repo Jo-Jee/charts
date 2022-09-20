@@ -1,0 +1,13 @@
+grafana:
+  ingress:
+    enabled: true
+    hosts:
+    - grafana.jojee.co.kr
+    annotations: {
+      kubernetes.io/ingress.class: traefik,
+      traefik.ingress.kubernetes.io/router.middlewares: kong-tls-redirect@kubernetescrd
+    }
+    tls:
+    - secretName: tls-secret
+      hosts:
+        - grafana.jojee.co.kr
