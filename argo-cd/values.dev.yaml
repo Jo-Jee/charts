@@ -5,6 +5,12 @@ server:
     resource.customizations.ignoreDifferences.ConfigMap: |
       jqPathExpressions:
       - .data
+    resource.customizations.ignoreDifferences.admissionregistration.k8s.io_MutatingWebhookConfiguration: |
+      jqPathExpressions:
+      - '.webhooks[]?.failurePolicy'
+    resource.customizations.ignoreDifferences.admissionregistration.k8s.io_ValidatingWebhookConfiguration: |
+      jqPathExpressions:
+      - '.webhooks[]?.failurePolicy'
 
   certificate:
     enabled: true
