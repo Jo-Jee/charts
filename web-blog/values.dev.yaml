@@ -8,9 +8,9 @@ app:
     pullPolicy: Always
   spec:
     cpu:
-      requests: 1000m
-      limits: 1000m
+      requests: 200m
+      limits: 200m
     memory:
-      requests: 1024Mi
-      limits: 1024Mi
+      requests: 256Mi
+      limits: 256Mi
   cmd: '["node", "server.js"]'
