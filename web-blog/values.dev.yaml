@@ -4,7 +4,7 @@ host: blog.jojee.co.kr
 app:
   image:
     repository: capjjo/web-blog
-    tag: b097717
+    tag: 7c4e578
     pullPolicy: Always
   spec:
     cpu:
