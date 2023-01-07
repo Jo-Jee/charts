@@ -1,4 +1,0 @@
-namespace: blog
-dbName: db-blog
-
-port: 3306
