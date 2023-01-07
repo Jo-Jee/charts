@@ -10,7 +10,11 @@ data:
     # Apply this config only on the primary.
     [mysqld]
     log-bin
+    character-set-server=utf8mb4
+    collation-server=utf8_general_ci
   replica.cnf: |
     # Apply this config only on replicas.
     [mysqld]
     super-read-only
+    character-set-server=utf8mb4
+    collation-server=utf8_general_ci
