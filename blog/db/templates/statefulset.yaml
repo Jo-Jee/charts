@@ -31,6 +31,7 @@ spec:
           # Add an offset to avoid reserved server-id=0 value.
           echo server-id=$((100 + $ordinal)) >> /mnt/conf.d/server-id.cnf
           # Copy appropriate conf.d files from config-map to emptyDir.
+          cp /mnt/config-map/default.cnf /mnt/conf.d/
           if [[ $ordinal -eq 0 ]]; then
             cp /mnt/config-map/primary.cnf /mnt/conf.d/
           else
