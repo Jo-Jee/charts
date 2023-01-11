@@ -1,0 +1,6 @@
+namespace: blog
+configMap: web-blog
+appName: web-blog
+
+port: 3000
+readinessProbePath: /api/ping
