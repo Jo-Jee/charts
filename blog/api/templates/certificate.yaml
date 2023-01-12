@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}
   namespace: {{ .Values.namespace }}
 spec:
-  secretName: tls-secret
+  secretName: {{ .Release.Name }}-tls
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
