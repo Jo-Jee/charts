@@ -1,0 +1,16 @@
+env: prod
+host: api.blog.jojee.co.kr
+
+app:
+  image:
+    repository: capjjo/api-blog
+    tag: latest
+    pullPolicy: Always
+  spec:
+    cpu:
+      requests: 500m
+      limits: 500m
+    memory:
+      requests: 1024Mi
+      limits: 1024Mi
+  cmd: '["java", "-Dfile.encoding=UTF-8", "-Xmx512m", "-jar", "app.jar"]'

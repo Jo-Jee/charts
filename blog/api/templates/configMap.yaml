@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configMap }}
+  namespace: {{ .Values.namespace }}
+data:
+  SPRING_PROFILES_ACTIVE: {{ .Values.env }}
