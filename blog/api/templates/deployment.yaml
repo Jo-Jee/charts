@@ -53,3 +53,9 @@ spec:
               path: {{ .Values.livenessProbePath }}
               port: {{ .Values.port }}
             periodSeconds: 5
+          startupProbe:
+            httpGet:
+              path: {{ .Values.startupProbePath }}
+              port: {{ .Values.port }}
+            failureThreshold: 36
+            periodSeconds: 10

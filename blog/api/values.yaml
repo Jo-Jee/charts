@@ -7,3 +7,4 @@ secret: api-blog
 port: 8080
 livenessProbePath: /actuator/health/liveness
 readinessProbePath: /actuator/health/readiness
+startupProbePath: /actuator/health
