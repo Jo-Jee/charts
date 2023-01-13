@@ -10,7 +10,7 @@ spec:
   tls:
   - hosts:
     - {{ .Values.host }}
-    secretName: tls-secret
+    secretName: {{ .Release.Name }}-tls
   rules:
   - host: {{ .Values.host }}
     http:
