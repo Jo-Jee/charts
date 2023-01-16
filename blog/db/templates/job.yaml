@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Values.dbName }}-backup
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: {{ .Values.dbName }}-backup
+            image: capjjo/job-db-backup
+            imagePullPolicy: Always
+            command:
+            - /var/run/backup.sh
+            env:
+            - name: DB_HOST
+              value: {{ .Values.dbName }}
+            - name: BUCKET
+              value: s3://jj-db-backup/blog/
+          restartPolicy: OnFailure
