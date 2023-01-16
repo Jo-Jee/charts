@@ -19,4 +19,9 @@ spec:
               value: {{ .Values.dbName }}
             - name: BUCKET
               value: s3://jj-db-backup/blog/
+            envFrom:
+              - configMapRef:
+                  name: {{ .Values.dbName }}-backup
+              - secretRef:
+                  name: {{ .Values.dbName }}
           restartPolicy: OnFailure
