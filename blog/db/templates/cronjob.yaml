@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: {{ .Values.dbName }}-backup
 spec:
-  schedule: "0 3 * * *"
+  schedule: "0 18 * * *"
   jobTemplate:
     spec:
       template:
