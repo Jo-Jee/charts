@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.dbName }}-backup
 spec:
   schedule: "0 18 * * *"
+  successfulJobsHistoryLimit: 1
   jobTemplate:
     spec:
       template:
