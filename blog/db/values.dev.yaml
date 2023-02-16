@@ -5,8 +5,8 @@ db:
     pullPolicy: Always
   spec:
     cpu:
-      requests: 500m
-      limits: 500m
+      requests: 250m
+      limits: 250m
     memory:
-      requests: 1Gi
-      limits: 1Gi
+      requests: 512Mi
+      limits: 512Mi
