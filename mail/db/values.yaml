@@ -1,0 +1,4 @@
+namespace: mailu
+dbName: db-mailu
+
+port: 3306
